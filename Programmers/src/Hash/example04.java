@@ -54,7 +54,7 @@ public class example04 {
 				for (int j = 0; j < genres.length; j++) {
 					if (g.equals(genres[j]) && max < plays[j] && j != firstIdx) {
 						max = plays[j];
-						secondIdx = j;
+					 	secondIdx = j;
 					}
 				}
 				
