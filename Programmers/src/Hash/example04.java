@@ -3,6 +3,7 @@ package Hash;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 
 /*
  * < 베스트 앨범  >  
@@ -30,9 +31,36 @@ public class example04 {
 	        for (String key : hm.keySet()) {
 				genre.add(key);
 			}
+	        // key 값에 해당하는 value 를 내림차순으로 정렬한다. 
 	        Collections.sort(genre, (o1, o2) -> hm.get(o2) - hm.get(o1));
 	        
 	        ArrayList<Integer> list = new ArrayList<>();
+	        for (int i = 0; i < genre.size(); i++) {
+				String g = genre.get(i);
+				
+				//해당 장르의 음악 중에서 play 횟수가 가장 큰 인덱스를 찾는다.
+				int max = 0;
+				int firstIdx = -1;
+				for (int j = 0; j < genres.length; j++) {
+					if (g.equals(genres[j]) && max < plays[j]) {
+						max = plays[j];
+						firstIdx = j;
+					}
+				}
+				
+				// 해당 장르의 음악 중에서 play횟수가 두번째로 큰 인덱스를 찾는다. 
+				max = 0;
+				int secondIdx = -1; 
+				for (int j = 0; j < genres.length; j++) {
+					if (g.equals(genres[j]) && max < plays[j] && j != firstIdx) {
+						max = plays[j];
+						secondIdx = j;
+					}
+				}
+				
+			}
+	        
+	        
 	        
 	        return answer;
 	    }
