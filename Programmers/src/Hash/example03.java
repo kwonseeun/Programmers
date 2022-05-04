@@ -1,7 +1,6 @@
 package Hash;
 
 import java.util.HashMap;
-import java.util.Iterator;
 
 /*
  * < 위장 >  
