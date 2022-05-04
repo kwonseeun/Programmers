@@ -28,6 +28,11 @@ public class example03 {
 				answer += hm.get(key);
 			}
 	        return answer;
-	    }
-
+	  }
 }
+
+/**
+ * hash로 count 하는 코드를 잘 알아둘 것, hashMap에서 특정 key를 가진 value 가 
+ * 있는지 확인하고, 있으면 value+1, 없으면 1로 삽입하는 코드이다. 
+ * hm.getOrDefault() : 가져오거나, 디폴트값 주거나 
+ * */
