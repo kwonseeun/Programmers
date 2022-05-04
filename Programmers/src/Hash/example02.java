@@ -17,24 +17,24 @@ public class example02 {
 전화번호부에 적힌 전화번호를 담은 배열 phone_book 이 solution 함수의 매개변수로 주어질 때,
 어떤 번호가 다른 번호의 접두어인 경우가 있으면 false를 그렇지 않으면 true를 return 하도록 solution 함수를 작성해주세요. */
 	public boolean solution(String[] phone_book) {
-		boolean answer = true;
-		
-		// hashMap 선언 
-		Map<String,Integer> map = new HashMap<>();
-		
-		// 모든 전화번호를 hashMap 에 넣는다 
-		for (int i = 0; i < phone_book.length; i++) 
-			map.put(phone_book[i], i);
-
-		// 전화번호의 substring이 hashmap 에 존재하는지 확인한다. 
-		for (int i = 0; i < phone_book.length; i++) {
-			for (int j = 0; j < phone_book[i].length(); j++) {
-				if (map.containsKey(phone_book[i].substring(0, j))) {
-					return false;
-				}
-			}
-		}
-		return answer;
+		 boolean answer = true;
+	        Map<String, Integer> map = new HashMap<>();
+	        for (int i = 0; i <phone_book.length; i++) {
+	            map.put(phone_book[i], i);
+	        }
+	        for (int i = 0; i < phone_book.length; i++) {
+	            for (int j = 1; j < phone_book[i].length(); j++) {
+	                if(map.containsKey(phone_book[i].substring(0,j))) {
+	                    answer = false;
+	                }
+	            }
+	        }
+	        return answer;
 	}
 	
 }
+/**
+ * phone_book 배열에 있는 문자열을 hashMap key로 넣는다
+ * map.containKey()를 이용해 순서대로 문자열을 하나씩 비교한다. 
+ *각 번호를 앞에서부터 한자리씩 늘려가며 자른뒤 해당 번호에 전화번호가 map에 있는지 확인
+ *이때 자기 자신을 비교하는 것을 제외하기 위해 문자열의 길이보다 1 작은 길이까지만 비교한다. */
