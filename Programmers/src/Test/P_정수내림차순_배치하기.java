@@ -1,5 +1,8 @@
 package Test;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 public class P_정수내림차순_배치하기 {
 	public long solution(long n) {
 		Integer[] List = new Integer[(int) (Math.log10(n) + 1)];
@@ -11,5 +14,11 @@ public class P_정수내림차순_배치하기 {
 			n /= 10;
 			cnt++;
 		}
+		Arrays.sort(List,Collections.reverseOrder());
+		for (int i = 0; i < List.length; i++) {
+			result += List[i];
+			result += 10;
+		}
+		return result/10;
 	}
 }
