@@ -11,11 +11,9 @@ public class P_직사각형_별찍기 {
 		int m = sc.nextInt();
 		
 		for (int i = 0; i < m; i++) {
-			for (int j = 0; j < n; j++) {
-				System.out.println("*");
+			for (int j = 0; j < n; j++) 
+				System.out.print("*");
 				System.out.println("");
-			}
 		}
-		
 	}  
 }
