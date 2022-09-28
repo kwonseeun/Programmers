@@ -27,6 +27,17 @@ public class P_모의고사 {
 			}
 		}
 		
+		for(int i : answer) {
+			if(i > maxNum) {
+				maxNum = i;
+			}
+		}
+		
+		for(int i=0; i<3; i++) {
+			if(answer[i] == maxNum) {
+				countNum.add(i+1);
+			}
+		}
 		
 		return answer;
 	}
