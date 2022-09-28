@@ -39,6 +39,6 @@ public class P_모의고사 {
 			}
 		}
 		
-		return answer;
+		return countNum.stream().mapToInt(i->i).toArray();
 	}
 }
