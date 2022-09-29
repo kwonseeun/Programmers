@@ -43,6 +43,11 @@ public class P_실패율 {
 			list.add(new Point(i, (double)cnt / size));
 			size -= cnt;
 		}
-		
+		Collections.sort(list);
+		int[] answer = new int[N];
+		for (int i = 0; i < N; i++) {
+			answer[i] = list.get(i).x;
+		}
+		return answer;
 	}
 }
