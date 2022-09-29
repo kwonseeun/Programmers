@@ -36,7 +36,13 @@ public class P_실패율 {
 				cnt++;
 				idx++;
 			}
-           
-		return answer;
+            if(cnt == 0){
+                list.add(new Point(i, 0));
+                continue;
+            }
+			list.add(new Point(i, (double)cnt / size));
+			size -= cnt;
+		}
+		
 	}
 }
