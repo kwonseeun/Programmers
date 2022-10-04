@@ -5,7 +5,7 @@ public class P_신규아이디추천 {
 		String answer = "";
 			new_id = new_id.toLowerCase();
 			new_id = new_id.replaceAll("[^0-9a-z.-", "");
-			new_id = new_id.replaceAll("[]+",".");
+			new_id = new_id.replaceAll("[.]+",".");
 			
 			if (new_id.startsWith(".")) {
 				new_id=new_id.substring(1);
@@ -23,7 +23,7 @@ public class P_신규아이디추천 {
 				new_id=new_id.substring(0, new_id.length()-1);
 			}
 			while (new_id.length()<3) {
-				new_id+=new_id+= new_id.charAt(new_id.length()-1);
+				new_id+=new_id.charAt(new_id.length()-1);
 			}
 			
 			answer=new_id;
