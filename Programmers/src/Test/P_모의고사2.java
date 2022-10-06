@@ -25,7 +25,7 @@ public class P_모의고사2 {
 				score[2]++;
 			}
 			
-			int topScore = Math.max(Math.max(score[0], score[1]);
+			int topScore = Math.max(score[0], score[1], score[2]);
 			
 			List<Integer> students = new ArrayList<Integer>();
 			for (int j = 0; j < score.length; j++) {
