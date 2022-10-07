@@ -18,6 +18,8 @@ public class P_모의고사2 {
 	        int max = Math.max(Math.max(answer1, answer2),answer3); // max값 구하기
 	        ArrayList<Integer> list = new ArrayList<Integer>();
 	        if(max==answer1) list.add(1); //max값이랑 같으면 넣는다.
+	        if(max==answer2) list.add(2);
+	        if(max==answer3) list.add(3);
 	        
 	        answer = new int[list.size()];
 	        
