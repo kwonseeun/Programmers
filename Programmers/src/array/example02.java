@@ -11,6 +11,10 @@ public class example02 {
 			/*
 		(1) 알맞은 코드를 넣어 완성하시오.
 			 */ }
-
+		// 배열 ballArr의 앞에서 3개의 수를 배열 ball3로 복사한다.
+		/* (2) */
+		for(int i=0;i<ball3.length;i++) {
+			System.out.print(ball3[i]); // 결과 : 486
+		}
 	} // end of main
 }
