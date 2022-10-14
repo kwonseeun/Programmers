@@ -33,7 +33,11 @@ public class example04 {
 	             System.out.println("=====================");
 	            System.out.println("정렬 후");
 	        
-	      
+	        // 선택후     
+	        for( i = 0 ; i < 5 ; i++)
+	        {
+	            System.out.println((i+1) + "번째 데이터" + test[i]);
+	        }
 	        
 	}
 
