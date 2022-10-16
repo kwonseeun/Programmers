@@ -27,7 +27,10 @@ public class example05 {
                 }
             }
  
-           
+            if (flag == 0) 
+            {
+                break;
+            }
         }
         
         System.out.println("=====================");
