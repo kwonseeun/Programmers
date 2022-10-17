@@ -34,7 +34,6 @@ public class example05 {
         }
         
         System.out.println("=====================");
-        System.out.println("=====================");
         System.out.println("정렬 후");
         for (i = 0; i < 5; i++)     // 정렬 후 배열 
         {
