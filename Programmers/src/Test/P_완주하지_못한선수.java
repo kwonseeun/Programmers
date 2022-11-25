@@ -1,5 +1,7 @@
 package Test;
 
+import java.util.Arrays;
+
 public class P_완주하지_못한선수 {
 	public static void main(String[] args) {
 		String[]  participant= {"marina", "josipa", "nikola", "vinko", "filipa"}; 
