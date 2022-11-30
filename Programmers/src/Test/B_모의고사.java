@@ -16,5 +16,22 @@ public class B_모의고사 {
 	            if(answers[i] == third[i%third.length]){all[2]++;}
 	        }
 	        
-	  }
+	        List<Integer> clearPerson = new ArrayList<Integer>(); //List만들어주고 최대값 비교
+	        int max = Math.max(Math.max(all[0], all[1]),all[2]);
+	                
+	        if(max == all[0]){clearPerson.add(1);}
+	        if(max == all[1]){clearPerson.add(2);}
+	        if(max == all[2]){clearPerson.add(3);}
+	        
+	        Collections.sort(clearPerson); //가장 높은 점수를 받은 사람이 여러명일 경우 오름차순
+	        
+	        answer = new int[clearPerson.size()];
+	        
+	        for(int i = 0; i < answer.length; i++){
+	            answer[i] = clearPerson.get(i);
+	        }
+	                   
+	        
+	        return answer;
+	    }
 }
