@@ -1,5 +1,9 @@
 package Test;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class B_모의고사 {
 	  public int[] solution(int[] answers) {
 	        int[] answer = {};
