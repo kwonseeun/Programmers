@@ -1,5 +1,7 @@
 package Test;
 
+import java.util.HashMap;
+
 public class B_문자열과_영단어 {
 	public int solution(String s) {
         int answer = 0;
