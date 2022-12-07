@@ -34,8 +34,6 @@ public class B_모의고사 {
 	        for(int i = 0; i < answer.length; i++){
 	            answer[i] = clearPerson.get(i);
 	        }
-	                   
-	        
 	        return answer;
 	    }
 }
