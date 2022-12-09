@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 
 public class B_메뉴리뉴얼 {
 	public static void main(String[] args) {
-        menu_renewal s = new menu_renewal();
+		B_메뉴리뉴얼 s = new B_메뉴리뉴얼();
         String[] orders = {"ABCFG","AC","CDE","ACDE","BCFG","ACDEH"};
         int[] course = {2,3,4};
         System.out.println(Arrays.toString(s.solution(orders,course)));
@@ -35,5 +35,23 @@ public class B_메뉴리뉴얼 {
             answer[i] = pq.poll();
         }
         return answer;
+    }
+
+    public void find(int cnt,String now,int index,String word,int targetNum){
+        if(cnt == targetNum){
+            char[] cs = now.toCharArray();
+            Arrays.sort(cs);
+            String tmp = "";
+            for(char c : cs){
+                tmp += c;
+            }
+            map.put(tmp,map.getOrDefault(tmp,0)+1);
+            m = Math.max(m,map.get(tmp));
+            return;
+        }
+        for(int a = index; a<word.length();a++){
+            char s = word.charAt(a);
+            find(cnt+1,now+s,a+1,word,targetNum);
+        }
     }
 }
