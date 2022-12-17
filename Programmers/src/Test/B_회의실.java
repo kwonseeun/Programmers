@@ -37,5 +37,16 @@ public class B_회의실 {
 		    int count = 0;    // 최대값 변수 
 		    int end = -1;    // 다음시작 시간과 비교할 변수
 		    
-		
+		    for (int i = 0; i < num; i++) {
+		        
+		    	//현재 시작시간이 이전 종료시간보다 늦을 경우(1 4 와 3 5 처럼) 
+		        if (time[i][0] >= end) {
+		  
+		            end = time[i][1]; //현재 종료시간을 다음 시작시간과 비교하기위해 저장 
+		            count++;
+		        }
+		    }
+		    System.out.println(count);
+		    br.close();
+		}
 }
