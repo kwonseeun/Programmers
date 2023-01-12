@@ -22,6 +22,26 @@ public class P_체육복 {
             student[r]++;
 
 
+        // 3. 여분을 기준으로 앞 뒤를 확인하면서 체육복을 빌려준다
+        for (int i = 1; i <= n; i++) {
+            if (student[i] == 1) {
+                if (student[i - 1] == -1) {
+                    student[i]--;
+                    student[i - 1]++;
+                } else if (student[i + 1] == -1) {
+                    student[i]--;
+                    student[i + 1]++;
+                }
+            }
+        }
+
+
+        // 4. 체육복을 가진 학생 수를 계산한다.
+        for (int i = 1; i <= n; i++) {
+            if (student[i] >= 0)
+                answer++;
+        }
+
         return answer;
     }
 
