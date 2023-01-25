@@ -29,7 +29,29 @@ public class P_신규아이디_추천 {
 	            if(charList.size() > 0 && '.' == charList.get(charList.size()-1) ) 
 	            	charList.remove(charList.size()-1);
 	        }
-			return regularStr;
 	        
-	 }
+	        //5단계
+	        if(charList.size() == 0) charList.add('a');
+	 
+	        for(Character i : charList) {
+					answer += i;
+				}
+				
+	        if(answer.length() >= 16) {
+	            answer = answer.substring(0, 15);
+	 
+	            if(answer.charAt(answer.length()-1) == '.') {
+	                answer = answer.substring(0, answer.length() - 1);
+	            }
+	        }
+	 
+	        //7단계
+	        if(answer.length() <= 2) {
+	            while(answer.length() < 3) {
+	                answer += answer.substring(answer.length()-1);
+	            }
+	        }
+	        
+	        return answer;
+	    }
 }
