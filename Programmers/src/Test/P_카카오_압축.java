@@ -15,7 +15,22 @@ public class P_카카오_압축 {
 	        }
 	       
 	        int idx = 0;
-	     
+	        while(idx < msg.length()){
+	            String w = "";
+	            while(idx < msg.length()){
+	                if(!dict.containsKey(w+msg.charAt(idx))){
+	                    break;
+	                }else{
+	                    w += msg.charAt(idx);
+	                }
+	                idx++;
+	            }
+	            
+	            ans.add(dict.get(w));
+	            if(idx < msg.length()){
+	                dict.put(w+msg.charAt(idx), dictIdx++);
+	            }            
+	        }
 	        
 	        answer = new int[ans.size()];
 	        for(int i =0; i<ans.size(); i++){
