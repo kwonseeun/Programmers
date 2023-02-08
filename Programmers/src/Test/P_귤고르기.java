@@ -1,9 +1,7 @@
 package Test;
 
-import java.security.KeyStore.Entry;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+import java.util.Map.*;
 
 public class P_귤고르기 {
 	  public int solution(int k, int[] tangerine) {
@@ -24,7 +22,14 @@ public class P_귤고르기 {
 	            sizeMap.put(size, sizeMap.getOrDefault(size, 0)+1);
 	        }
 	        
-	       
+	        /* 2. 사이즈별로 가장 많은 귤들부터 담기 */
+	        while(k > 0) {
+	            Entry<Integer, Integer> maxEntry = Collections.max(sizeMap.entrySet(), comparator); // Max Value의 key, value
+
+	            k -= maxEntry.getValue(); // 박스에 담았으니 그만큼 줄임
+	            answer++; // 종류별로 ++
+	            sizeMap.put(maxEntry.getKey(), 0); // 해당 key는 0으로 초기화
+	        }
 
 	        return answer;
 	    }
