@@ -24,7 +24,17 @@ public class P_모의고사_2 {
             }
         }
 
-      
+        for(int n : answer){
+            if(n > max){
+                max = n;
+                System.out.println (n);
+            }
+        }
+        for (int i = 0; i < 3; i++) {
+            if (answer[i] == max) {
+                countNum.add(i+1);
+            }
+        }
         return countNum.stream().mapToInt(i->i).toArray();
     }
 }
